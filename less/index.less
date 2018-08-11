@@ -1,0 +1,33 @@
+* {
+  box-sizing: border-box;
+}
+
+.flexbox(@flex-direction: row, @justify-content: center, @align-items: center){
+  display: flex;
+  flex-direction: @flex-direction;
+  justify-content: @justify-content;
+  align-items: @align-items;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+  .flexbox(column);
+}
+
+.container {
+  .flexbox(column);
+
+  .card {
+    .flexbox(column);
+    width: 300px;
+
+    button {
+      cursor: pointer;
+      border-radius: 5px;
+      border: 1px solid black;
+      padding: 10px;
+      font-size: 16px;
+    }
+  }
+}
